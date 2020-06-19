@@ -1,5 +1,5 @@
 <?php
-$title = 'BcDummyData';
+$title = 'ダミーデータ作成';
 $description = 'ダミーデータを作成します。';
 $author = 'kaburk';
 $url = 'https://blog.kaburk.com/';

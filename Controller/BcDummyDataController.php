@@ -148,6 +148,9 @@ class BcDummyDataController extends AppController {
 			'fields' => [
 				'id'
 			],
+			'conditions' => [
+				'blog_content_id' => $blogContentId,
+			],
 			'recursive' => -1,
 		]);
 

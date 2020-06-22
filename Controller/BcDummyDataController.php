@@ -16,7 +16,8 @@ class BcDummyDataController extends AppController {
 	public $components = array(
 		'BcAuth',
 		'Cookie',
-		'BcAuthConfigure'
+		'BcAuthConfigure',
+		'BcMessage',
 	);
 
 	public $crumbs = array(
@@ -45,9 +46,9 @@ class BcDummyDataController extends AppController {
 
 		if ($this->request->data) {
 			if ($this->makeData($this->request->data('BcDummyData'))) {
-				$this->setMessage('ダミーテータの作成に成功しました。');
+				$this->BcMessage->setInfo(__d('baser', 'ダミーテータの作成に成功しました。'));
 			} else {
-				$this->setMessage('ダミーテータの作成に失敗しました。', true);
+				$this->BcMessage->setError(__d('baser', 'ダミーテータの作成に失敗しました。'));
 			}
 		}
 
